@@ -48,5 +48,5 @@
     if (e.key === 'ArrowRight') show(current + 1);
     if (e.key === 'ArrowLeft') show(current - 1);
   });
-  box.addEventListener('close', function () { imgs[current].focus({ preventScroll: true }); });
+  box.addEventListener('close', function () { imgs[current].scrollIntoView({ block: 'nearest' }); imgs[current].focus({ preventScroll: true }); });
 })();
