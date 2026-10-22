@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Theo Dwyer | Level & Technical Designer</title>
 <meta name="description" content="Portfolio of Theo Dwyer, junior level and technical designer working in Unreal Engine 5.">
-<link rel="stylesheet" href="style.css?v=5">
+<link rel="stylesheet" href="style.css?v=6">
 </head>
 <body>
 <header><nav>
@@ -13,10 +13,8 @@
   <ul><li><a href="#projects">Projects</a></li><li><a href="#about">About</a></li><li><a href="#contact">Get In Touch</a></li></ul>
 </nav></header>
 
-<section class="hero" style="background-image:url('video/tetra-hero-poster.webp?v=2')">
-  <video autoplay muted loop playsinline preload="metadata" poster="video/tetra-hero-poster.webp?v=2" aria-hidden="true">
-    <source data-src="video/tetra-hero.mp4?v=2" type="video/mp4">
-  </video>
+<section class="hero" style="background-image:url('video/tetra-hero-poster.webp?v=3')">
+  <video autoplay muted loop playsinline preload="metadata" poster="video/tetra-hero-poster.webp?v=3" aria-hidden="true"></video>
   <button class="hero-toggle" type="button" aria-label="Pause background video">&#10073;&#10073;</button>
 </section>
 <script>
@@ -24,7 +22,11 @@
   var hero = document.querySelector('.hero'), v = hero.querySelector('video'), b = hero.querySelector('.hero-toggle');
   // Visitors who prefer reduced motion just see the still frame, and the video never downloads.
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { v.remove(); b.remove(); return; }
-  var src = v.querySelector('source'); src.src = src.dataset.src; v.load();
+  // Big screens get 1080p (AV1 where the browser supports it, otherwise H.264); phones get a lighter 720p file.
+  var wide = window.matchMedia('(min-width: 900px)').matches;
+  v.src = !wide ? 'video/tetra-hero-720.mp4?v=3'
+    : v.canPlayType('video/mp4; codecs="av01.0.08M.08"') ? 'video/tetra-hero-1080-av1.mp4?v=3'
+    : 'video/tetra-hero-1080.mp4?v=3';
   function sync() {
     b.innerHTML = v.paused ? '&#9654;' : '&#10073;&#10073;';
     b.setAttribute('aria-label', v.paused ? 'Play background video' : 'Pause background video');
