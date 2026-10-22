@@ -56,6 +56,6 @@ main img:not(.card img):focus-visible{outline:2px solid var(--accent);outline-of
 .hero-toggle:hover,.hero-toggle:focus-visible{opacity:1;border-color:var(--accent)}
 /* Project videos */
 .video-fig{margin:1.25rem 0}
-.video-fig video{width:100%;display:block;border-radius:6px;background:#000}
+.video-fig video{width:100%;height:auto;display:block;border-radius:6px;background:#000}
 .gallery .video-fig{margin:0}
 .gallery .video-fig video{aspect-ratio:16/9;object-fit:contain}
