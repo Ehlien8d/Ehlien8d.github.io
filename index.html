@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Theo Dwyer | Level & Technical Designer</title>
 <meta name="description" content="Portfolio of Theo Dwyer, junior level and technical designer working in Unreal Engine 5.">
-<link rel="stylesheet" href="style.css?v=6">
+<link rel="stylesheet" href="style.css?v=7">
 </head>
 <body>
 <header><nav>
@@ -32,7 +32,8 @@
     b.setAttribute('aria-label', v.paused ? 'Play background video' : 'Pause background video');
   }
   v.addEventListener('play', sync); v.addEventListener('pause', sync); sync();
-  b.addEventListener('click', function () { if (v.paused) { v.play(); } else { v.pause(); } });
+  v.addEventListener('error', function () { b.remove(); });
+  b.addEventListener('click', function () { if (v.paused) { v.play().catch(function () {}); } else { v.pause(); } });
 })();
 </script>
 
