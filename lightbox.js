@@ -2,7 +2,7 @@
 // Arrow keys or the side buttons move between images on the same page; Esc or a click closes.
 (function () {
   var imgs = Array.prototype.slice.call(document.querySelectorAll('main img')).filter(function (i) {
-    return !i.closest('.card');
+    return !i.closest('.card') && !i.closest('a');
   });
   if (!imgs.length || !window.HTMLDialogElement) return;
 

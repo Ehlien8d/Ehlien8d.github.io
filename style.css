@@ -59,3 +59,7 @@ main img:not(.card img):focus-visible{outline:2px solid var(--accent);outline-of
 .video-fig video{width:100%;height:auto;display:block;border-radius:6px;background:#000}
 .gallery .video-fig{margin:0}
 .gallery .video-fig video{aspect-ratio:16/9;object-fit:contain}
+.about .badge{display:block;width:min(220px,70%);justify-self:center;margin-top:.5rem}
+.about .badge img{width:100%;height:auto;border-radius:0;transition:transform .15s}
+.about .badge:hover img{transform:scale(1.03)}
+main a img{cursor:pointer}
