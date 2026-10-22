@@ -54,3 +54,8 @@ main img:not(.card img):focus-visible{outline:2px solid var(--accent);outline-of
 @media(prefers-reduced-motion:reduce){.hero video{display:none}}
 .hero-toggle{position:absolute;right:1rem;bottom:1rem;z-index:2;width:2.5rem;height:2.5rem;border-radius:50%;border:1px solid var(--line);background:rgba(20,21,23,.6);color:var(--text);font-size:.8rem;cursor:pointer;opacity:.75}
 .hero-toggle:hover,.hero-toggle:focus-visible{opacity:1;border-color:var(--accent)}
+/* Project videos */
+.video-fig{margin:1.25rem 0}
+.video-fig video{width:100%;display:block;border-radius:6px;background:#000}
+.gallery .video-fig{margin:0}
+.gallery .video-fig video{aspect-ratio:16/9;object-fit:contain}

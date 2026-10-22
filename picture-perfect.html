@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Picture Perfect | Theo Dwyer</title><link rel="stylesheet" href="style.css?v=7"></head>
+<title>Picture Perfect | Theo Dwyer</title><link rel="stylesheet" href="style.css?v=8"></head>
 <body>
 <header><nav><a class="name" href="index.html">Theo Dwyer</a>
 <ul><li><a href="index.html#projects">Projects</a></li><li><a href="index.html#about">About</a></li><li><a href="#contact">Get In Touch</a></li></ul></nav></header>
@@ -13,6 +13,7 @@
 <p><strong>My contributions:</strong> level design, environment design, VFX, build engineer, and source control management using Sourcetree.</p>
 <p class="muted">Created as my capstone project with Emily Donoghue and Gavyn Martin for the Circuit Stream Online Game Design Bootcamp 2024/25, through UBC Extended Learning.</p>
 
+<figure class="video-fig"><video controls preload="none" playsinline poster="video/picture-perfect/gameplay-demo-poster.webp" aria-label="Picture Perfect gameplay demo"><source src="video/picture-perfect/gameplay-demo.mp4" type="video/mp4"></video></figure>
 <h2>Level Design</h2>
 <p>My intention was to create a map that feels vast, wild, and alive, yet welcoming and explorable. A map this large raised a few questions: How will the player know where to go? How do we control the play space and keep it engaging?</p>
 <p>In an exploration and photography game, the landscape should gently guide the player's movement and their eye toward goals and objectives. To do that I used <strong>water</strong>, <strong>verticality</strong>, and <strong>paths</strong>.</p>
@@ -34,6 +35,7 @@
 <p>I used the hills, cliffs, and river together with the freelance gig locations to place objectives and points of interest across the map, then tied everything together with paths painted onto the landscape. Main paths are marked by signs while others stay hidden, keeping players from getting lost while guiding them to new locations.</p>
 <img loading="lazy" src="images/picture-perfect/picture-perfect-map-final-resize.webp" alt="Final map">
 
+<figure class="video-fig"><video controls preload="none" playsinline poster="video/picture-perfect/water-walk-poster.webp" aria-label="Walking along the river in Picture Perfect"><source src="video/picture-perfect/water-walk.mp4" type="video/mp4"></video></figure>
 <h2>Environment Design</h2>
 <p>The environment is inspired by the mountainous Pacific Northwest: towering mountains, rolling foothills, vast evergreen forests, and powerful rivers carving through the landscape. I wanted to recreate the feeling of smallness and awe of standing at the base of huge mountains. We were limited to free assets from Quixel and Fab, so flora and fauna variety depended on what we could find for free.</p>
 <div class="gallery">
@@ -45,8 +47,13 @@
 <h2>Waterfall and River Creation</h2>
 <img loading="lazy" src="images/picture-perfect/waterfallvibes.webp" alt="Waterfall">
 <p style="margin-top:1rem">I created the falls with Niagara and the fluid plugin. I made two vertical steps with the river spline, then added particle emitters at select spots to simulate bubbling and splashing. My first prototype used a single emitter, which looked good alone but got lost once water was added, so the final version layers multiple emitters of varying sizes for the froth around rocks and edges.</p>
-<!-- To add a video: upload to YouTube, then paste:
-<div class="video"><iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe></div> -->
+<figure class="video-fig"><video controls preload="none" playsinline poster="video/picture-perfect/waterfall-showcase-poster.webp" aria-label="Waterfall and river showcase"><source src="video/picture-perfect/waterfall-showcase.mp4" type="video/mp4"></video></figure>
+<div class="gallery">
+<figure class="video-fig"><video controls preload="none" playsinline poster="video/picture-perfect/waterfall-v1-emitter-poster.webp" aria-label="First waterfall prototype in the Niagara editor"><source src="video/picture-perfect/waterfall-v1-emitter.mp4" type="video/mp4"></video><figcaption class="muted">V.1: a single Niagara emitter. It looked good alone but got lost once water was added.</figcaption></figure>
+<figure class="video-fig"><video controls preload="none" playsinline poster="video/picture-perfect/waterfall-particles-poster.webp" aria-label="Waterfall with layered particle emitters"><source src="video/picture-perfect/waterfall-particles.mp4" type="video/mp4"></video><figcaption class="muted">Final: multiple emitters of varying sizes for the froth around rocks and edges.</figcaption></figure>
+</div>
+<h2>Final Product</h2>
+<figure class="video-fig"><video controls preload="none" playsinline poster="video/picture-perfect/waterfall-final-poster.webp" aria-label="The finished waterfall"><source src="video/picture-perfect/waterfall-final.mp4" type="video/mp4"></video></figure>
 <p><a class="btn" href="index.html#projects">← Back to projects</a></p>
 </main>
 <footer id="contact"><p><a href="mailto:theo.dwyer@gmail.com">theo.dwyer@gmail.com</a></p>

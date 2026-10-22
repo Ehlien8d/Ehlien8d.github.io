@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tetra | Theo Dwyer</title><link rel="stylesheet" href="style.css?v=7"></head>
+<title>Tetra | Theo Dwyer</title><link rel="stylesheet" href="style.css?v=8"></head>
 <body>
 <header><nav><a class="name" href="index.html">Theo Dwyer</a>
 <ul><li><a href="index.html#projects">Projects</a></li><li><a href="index.html#about">About</a></li><li><a href="#contact">Get In Touch</a></li></ul></nav></header>
@@ -11,6 +11,7 @@
 <p>Tetra is an adventure game set in the forested coastal mountains, currently being designed and developed by me. This page is living: as the game grows and evolves, so will this page.</p>
 
 <h2>Procedural Content Generation</h2>
+<figure class="video-fig"><video controls preload="none" playsinline poster="video/tetra/pcg-forest-poster.webp" aria-label="PCG forest generating across the Tetra landscape"><source src="video/tetra/pcg-forest.mp4" type="video/mp4"></video></figure>
 <p>My obsession lately has been PCG. It's an incredibly useful tool for building beautiful, natural-looking environments that are optimized for gameplay. I'm inspired by nature and lucky to be surrounded by it, and my goal is to replicate the forests around my home in the Pacific Northwest as closely as possible with PCG.</p>
 <div class="gallery">
 <figure><img loading="lazy" src="images/tetra/screenshot00044.webp" alt="PCG graph"><figcaption class="muted">Using splines and a difference node to cull points in the creek.</figcaption></figure>
@@ -19,11 +20,14 @@
 <img loading="lazy" src="images/tetra/pcg2-3.webp" alt="PCG forest detail">
 </div>
 
+<figure class="video-fig"><video controls preload="none" playsinline poster="video/tetra/pcg-town-poster.webp" aria-label="PCG forest growing around the town and roads"><source src="video/tetra/pcg-town.mp4" type="video/mp4"></video></figure>
 <h2>Optimization</h2>
 <img loading="lazy" src="images/tetra/screenshot00109.webp" alt="Distance culling of PCG foliage around the player in Tetra">
 <p style="margin-top:1rem">Originally I thought I needed to spawn every point across the entire 2 km × 2 km map. To improve performance, I added distance culling to the static mesh spawners so foliage only spawns around the player up to a set distance; the bigger the asset, the farther away it stays visible. I'm also taking advantage of Nanite so meshes look great at all distances without much performance cost.</p>
+<figure class="video-fig"><video controls preload="none" playsinline poster="video/tetra/distance-culling-poster.webp" aria-label="Distance culling: foliage spawning around the player as they move"><source src="video/tetra/distance-culling.mp4" type="video/mp4"></video></figure>
 <p>To keep paths clear, I use splines and tags: the PCG graph takes the spline data, runs it through a bounds modifier, and sends it to a difference node, removing anything within the bounds along the spline.</p>
 
+<figure class="video-fig"><video controls preload="none" playsinline poster="video/tetra/spline-difference-poster.webp" aria-label="Splines and a difference node clearing PCG points from a path"><source src="video/tetra/spline-difference.mp4" type="video/mp4"></video><figcaption class="muted">Splines and a difference node clearing PCG points from the paths.</figcaption></figure>
 <h2>Level Design</h2>
 <p>The map is 2 km × 2 km, made with a heightmap generator and real-world data from the coastal mountains of British Columbia.</p>
 <div class="gallery">
