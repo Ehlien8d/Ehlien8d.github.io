@@ -13,32 +13,33 @@
 <h2>Procedural Content Generation</h2>
 <p>My obsession lately has been PCG. It's an incredibly useful tool for building beautiful, natural-looking environments that are optimized for gameplay. I'm inspired by nature and lucky to be surrounded by it, and my goal is to replicate the forests around my home in the Pacific Northwest as closely as possible with PCG.</p>
 <div class="gallery">
-<figure><img src="https://images.squarespace-cdn.com/content/v1/691124d9a1c6bd269d419f45/cc326d86-94a1-46bc-b135-e13c10b2d9c5/ScreenShot00044.png" alt="PCG graph"><figcaption class="muted">Using splines and a difference node to cull points in the creek.</figcaption></figure>
-<figure><img src="https://images.squarespace-cdn.com/content/v1/691124d9a1c6bd269d419f45/ad154a84-7cef-4d9d-8ca9-aadfa3554eef/ScreenShot00059.png" alt="Slope culling"><figcaption class="muted">Using height and slope to cull points on steep surfaces.</figcaption></figure>
-<img src="https://images.squarespace-cdn.com/content/v1/691124d9a1c6bd269d419f45/2b7265e4-49da-43f9-b5df-058f2bfd5888/ScreenShot00091.png" alt="PCG forest">
-<img src="https://images.squarespace-cdn.com/content/v1/691124d9a1c6bd269d419f45/6176dd19-92f2-4d7e-a137-7ff366fee0d1/PCG2.3.png" alt="PCG forest detail">
+<figure><img loading="lazy" src="https://images.squarespace-cdn.com/content/v1/691124d9a1c6bd269d419f45/cc326d86-94a1-46bc-b135-e13c10b2d9c5/ScreenShot00044.png" alt="PCG graph"><figcaption class="muted">Using splines and a difference node to cull points in the creek.</figcaption></figure>
+<figure><img loading="lazy" src="https://images.squarespace-cdn.com/content/v1/691124d9a1c6bd269d419f45/ad154a84-7cef-4d9d-8ca9-aadfa3554eef/ScreenShot00059.png" alt="Slope culling"><figcaption class="muted">Using height and slope to cull points on steep surfaces.</figcaption></figure>
+<img loading="lazy" src="https://images.squarespace-cdn.com/content/v1/691124d9a1c6bd269d419f45/2b7265e4-49da-43f9-b5df-058f2bfd5888/ScreenShot00091.png" alt="PCG forest">
+<img loading="lazy" src="https://images.squarespace-cdn.com/content/v1/691124d9a1c6bd269d419f45/6176dd19-92f2-4d7e-a137-7ff366fee0d1/PCG2.3.png" alt="PCG forest detail">
 </div>
 
 <h2>Optimization</h2>
-<img src="https://images.squarespace-cdn.com/content/v1/691124d9a1c6bd269d419f45/ea083f8e-e764-4cc1-a11d-2f0a2a3ec98f/ScreenShot00109.png" alt="Optimization">
+<img loading="lazy" src="https://images.squarespace-cdn.com/content/v1/691124d9a1c6bd269d419f45/ea083f8e-e764-4cc1-a11d-2f0a2a3ec98f/ScreenShot00109.png" alt="Distance culling of PCG foliage around the player in Tetra">
 <p style="margin-top:1rem">Originally I thought I needed to spawn every point across the entire 2 km × 2 km map. To improve performance, I added distance culling to the static mesh spawners so foliage only spawns around the player up to a set distance; the bigger the asset, the farther away it stays visible. I'm also taking advantage of Nanite so meshes look great at all distances without much performance cost.</p>
 <p>To keep paths clear, I use splines and tags: the PCG graph takes the spline data, runs it through a bounds modifier, and sends it to a difference node, removing anything within the bounds along the spline.</p>
 
 <h2>Level Design</h2>
 <p>The map is 2 km × 2 km, made with a heightmap generator and real-world data from the coastal mountains of British Columbia.</p>
 <div class="gallery">
-<img src="https://images.squarespace-cdn.com/content/v1/691124d9a1c6bd269d419f45/af3f39ee-9b88-473a-9967-d7ea8b4fd96a/ScreenShot00024.png" alt="Heightmap terrain">
-<figure><img src="https://images.squarespace-cdn.com/content/v1/691124d9a1c6bd269d419f45/dab5dd5a-d45e-40ef-881b-6d1f920b7d1c/ScreenShot00048.png" alt="Ocean splines"><figcaption class="muted">Defining the ocean with splines so no PCG points spawn in the water.</figcaption></figure>
-<figure><img src="https://images.squarespace-cdn.com/content/v1/691124d9a1c6bd269d419f45/caefe6ce-b79d-4108-96c3-3f769f04e3e6/ScreenShot00036.png" alt="Town and roads"><figcaption class="muted">The beginnings of a town and road network.</figcaption></figure>
-<figure><img src="https://images.squarespace-cdn.com/content/v1/691124d9a1c6bd269d419f45/fade2e82-743f-4fb2-83d9-f5f5d0a1860b/ScreenShot00108.png" alt="Town and forest"><figcaption class="muted">The town and surrounding PCG forest.</figcaption></figure>
+<img loading="lazy" src="https://images.squarespace-cdn.com/content/v1/691124d9a1c6bd269d419f45/af3f39ee-9b88-473a-9967-d7ea8b4fd96a/ScreenShot00024.png" alt="Heightmap terrain">
+<figure><img loading="lazy" src="https://images.squarespace-cdn.com/content/v1/691124d9a1c6bd269d419f45/dab5dd5a-d45e-40ef-881b-6d1f920b7d1c/ScreenShot00048.png" alt="Ocean splines"><figcaption class="muted">Defining the ocean with splines so no PCG points spawn in the water.</figcaption></figure>
+<figure><img loading="lazy" src="https://images.squarespace-cdn.com/content/v1/691124d9a1c6bd269d419f45/caefe6ce-b79d-4108-96c3-3f769f04e3e6/ScreenShot00036.png" alt="Town and roads"><figcaption class="muted">The beginnings of a town and road network.</figcaption></figure>
+<figure><img loading="lazy" src="https://images.squarespace-cdn.com/content/v1/691124d9a1c6bd269d419f45/fade2e82-743f-4fb2-83d9-f5f5d0a1860b/ScreenShot00108.png" alt="Town and forest"><figcaption class="muted">The town and surrounding PCG forest.</figcaption></figure>
 </div>
 <div class="gallery">
-<img src="https://images.squarespace-cdn.com/content/v1/691124d9a1c6bd269d419f45/e94fb175-35c4-416f-8dfb-32ba1ca6e2d1/ScreenShot00172.png" alt="Snow and fog">
-<img src="https://images.squarespace-cdn.com/content/v1/691124d9a1c6bd269d419f45/0e888678-d46d-4035-add3-1634be38c221/ScreenShot00167.png" alt="Mountain snow">
+<img loading="lazy" src="https://images.squarespace-cdn.com/content/v1/691124d9a1c6bd269d419f45/e94fb175-35c4-416f-8dfb-32ba1ca6e2d1/ScreenShot00172.png" alt="Snow and fog">
+<img loading="lazy" src="https://images.squarespace-cdn.com/content/v1/691124d9a1c6bd269d419f45/0e888678-d46d-4035-add3-1634be38c221/ScreenShot00167.png" alt="Mountain snow">
 </div>
 <p>I added snow and fog using William Faucher's EasySnow and EasyFog, with snow set to start above a certain height.</p>
 <p><a class="btn" href="index.html#projects">← Back to projects</a></p>
 </main>
 <footer id="contact"><p><a href="mailto:theo.dwyer@gmail.com">theo.dwyer@gmail.com</a></p>
-<p><a href="https://www.linkedin.com/in/theo-dwyer">LinkedIn</a><a href="https://www.credly.com/badges/b016af10-5c86-4a6a-9766-f2f35e834133/public_url">Credly</a></p></footer>
+<p><a href="https://www.linkedin.com/in/theo-dwyer">LinkedIn</a><a href="https://www.credly.com/badges/b016af10-5c86-4a6a-9766-f2f35e834133/public_url">Credly</a></p>
+<p>© Theo Dwyer</p></footer>
 </body></html>
