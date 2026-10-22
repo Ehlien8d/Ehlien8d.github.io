@@ -1,7 +1,7 @@
 # Theo Dwyer — Portfolio Site
 
 Static portfolio site for Theo Dwyer, junior level / technical designer (Unreal Engine 5).
-Hosted on GitHub Pages at https://ehlien8d.github.io from the `main` branch root.
+Hosted on GitHub Pages from the `main` branch root, at https://theodwyer.com (custom domain set by the `CNAME` file; DNS at Porkbun; theodwyer.ca forwards to it). Old address ehlien8d.github.io redirects there.
 Plain HTML + one shared `style.css`. No build step, no frameworks, no JavaScript unless there's a real need.
 
 ## Files
