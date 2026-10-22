@@ -40,6 +40,6 @@ Plain HTML + one shared `style.css`. No build step, no frameworks, no JavaScript
 
 ## Known to-dos
 - Images live in `images/<project>/` as WebP (max 1600px wide; `-card` versions at 800px for home page cards). Originals are on Theo's computer in E:\PortfolioTingz, never committed.
-- Three Blaze A Maze images (Cursed Cubes, Tree of Knowledge, Checkpoint) are still hotlinked from Squarespace; originals not found yet. Replace before Squarespace is cancelled.
+- One Blaze A Maze image (Cursed Cubes and moving platforms, blaze-a-maze.html) is still hotlinked from Squarespace; original not found yet. Replace before Squarespace is cancelled.
 - Screenshot filenames (ScreenShot000NN) repeat across projects and capture sessions; match images by content, not by name.
 - Picture Perfect waterfall video: placeholder comment in `picture-perfect.html` until it's on YouTube.
