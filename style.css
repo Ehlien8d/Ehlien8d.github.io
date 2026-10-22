@@ -63,3 +63,9 @@ main img:not(.card img):focus-visible{outline:2px solid var(--accent);outline-of
 .about .badge img{width:100%;height:auto;border-radius:0;transition:transform .15s}
 .about .badge:hover img{transform:scale(1.03)}
 main a img{cursor:pointer}
+/* About: full-width band over Theo's turkey tail photo */
+.about-band{width:100vw;margin:3rem 0 0 calc(50% - 50vw);padding:3rem max(1.25rem,calc(50vw - 550px + 1.25rem));background:linear-gradient(rgba(20,21,23,.55),rgba(20,21,23,.68)),url("images/about/turkey-tails-bg.webp") center/cover no-repeat}
+.about-band h2{margin-top:0}
+.about .pics{justify-items:center;gap:1.5rem}
+.about .portrait{width:min(260px,70%);aspect-ratio:1;height:auto;object-fit:cover;border-radius:50%;border:1px solid var(--line)}
+@media(max-width:700px){.about-band{padding:2.5rem 1.25rem}.about .pics{order:-1}}
