@@ -26,7 +26,9 @@ p{margin-bottom:1rem;color:var(--text)}.muted{color:var(--muted)}
 .video{position:relative;padding-top:56.25%;margin:1rem 0}.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:6px}
 footer{border-top:1px solid var(--line);margin-top:3rem;padding:2rem 1.25rem;text-align:center;color:var(--muted)}
 footer a{margin:0 .6rem}
-@media(max-width:700px){.about{grid-template-columns:1fr}h1{font-size:1.8rem}}/* Gallery rows: every image the same shape so rows line up */
+@media(max-width:700px){.about{grid-template-columns:1fr}h1{font-size:1.8rem}}
+/* Gallery rows: every image the same shape so rows line up; four-image rows become 2x2 */
+.gallery:has(>:nth-child(4):last-child){grid-template-columns:repeat(auto-fit,minmax(min(420px,100%),1fr))}
 .gallery>img,.gallery>figure img{width:100%;aspect-ratio:16/9;object-fit:cover}
 .gallery figure{margin:0}
 figcaption{margin-top:.4rem;font-size:.9rem}
