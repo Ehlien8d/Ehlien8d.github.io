@@ -8,6 +8,8 @@ Plain HTML + one shared `style.css`. No build step, no frameworks, no JavaScript
 - `index.html` — home: project cards, About, contact footer
 - `picture-perfect.html`, `tetra.html`, `the-great-wander.html`, `blaze-a-maze.html` — one page per project
 - `style.css` — all styling; colour tokens live in `:root`
+- `lightbox.js` — click-to-enlarge viewer for page images
+- **Cache-busting:** pages load `style.css?v=N` and `lightbox.js?v=N`. GitHub Pages lets browsers cache files for 10 minutes, so whenever either file changes, bump N on every page or visitors get new HTML with old CSS.
 
 ## Facts that must stay correct
 - Name: Theo Dwyer. Contact email: theo.dwyer@gmail.com (never ehliendesign@gmail.com)

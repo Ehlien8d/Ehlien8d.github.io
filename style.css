@@ -38,7 +38,7 @@ main img:not(.card img):focus-visible{outline:2px solid var(--accent);outline-of
 .lightbox{border:0;padding:0;background:transparent;max-width:none;max-height:none;width:100vw;height:100vh;color:var(--text)}
 .lightbox::backdrop{background:rgba(10,11,12,.92)}
 .lightbox[open]{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.75rem}
-.lightbox img{max-width:calc(100vw - 8rem);max-height:84vh;width:auto;height:auto;object-fit:contain;border-radius:6px;cursor:zoom-out}
+.lightbox img{max-width:calc(100vw - 8rem);max-height:84vh;width:auto;height:auto;object-fit:contain;border-radius:8px;border:1px solid var(--line);box-shadow:0 12px 40px rgba(0,0,0,.6);cursor:zoom-out}
 .lightbox p{margin:0;color:var(--muted);text-align:center;padding:0 1rem}
 .lightbox button{position:absolute;background:var(--panel);color:var(--text);border:1px solid var(--line);border-radius:6px;font-size:1.4rem;line-height:1;width:2.75rem;height:2.75rem;cursor:pointer}
 .lightbox button:hover{border-color:var(--accent)}
