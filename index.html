@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Theo Dwyer | Level & Technical Designer</title>
 <meta name="description" content="Portfolio of Theo Dwyer, junior level and technical designer working in Unreal Engine 5.">
-<link rel="stylesheet" href="style.css?v=4">
+<link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
 <header><nav>
@@ -14,10 +14,25 @@
 </nav></header>
 
 <section class="hero" style="background-image:url('video/tetra-hero-poster.webp')">
-  <video autoplay muted loop playsinline preload="auto" poster="video/tetra-hero-poster.webp" aria-hidden="true">
-    <source src="video/tetra-hero.mp4" type="video/mp4">
+  <video autoplay muted loop playsinline preload="metadata" poster="video/tetra-hero-poster.webp" aria-hidden="true">
+    <source data-src="video/tetra-hero.mp4" type="video/mp4">
   </video>
+  <button class="hero-toggle" type="button" aria-label="Pause background video">&#10073;&#10073;</button>
 </section>
+<script>
+(function () {
+  var hero = document.querySelector('.hero'), v = hero.querySelector('video'), b = hero.querySelector('.hero-toggle');
+  // Visitors who prefer reduced motion just see the still frame, and the video never downloads.
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { v.remove(); b.remove(); return; }
+  var src = v.querySelector('source'); src.src = src.dataset.src; v.load();
+  function sync() {
+    b.innerHTML = v.paused ? '&#9654;' : '&#10073;&#10073;';
+    b.setAttribute('aria-label', v.paused ? 'Play background video' : 'Pause background video');
+  }
+  v.addEventListener('play', sync); v.addEventListener('pause', sync); sync();
+  b.addEventListener('click', function () { if (v.paused) { v.play(); } else { v.pause(); } });
+})();
+</script>
 
 <main>
   <h1>Theo Dwyer</h1>
