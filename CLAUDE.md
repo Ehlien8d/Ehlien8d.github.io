@@ -10,7 +10,7 @@ Plain HTML + one shared `style.css`. No build step, no frameworks, no JavaScript
 - `style.css` — all styling; colour tokens live in `:root`
 - `lightbox.js` — click-to-enlarge viewer for page images
 - `video/` — home page banner: `tetra-hero-1080-av1.mp4` (desktop, AV1, ~8 MB), `tetra-hero-1080.mp4` (desktop fallback, H.264, ~14 MB), `tetra-hero-720.mp4` (phones, H.264, ~5 MB), `tetra-hero-poster.webp`. Script in index.html picks one by screen width and AV1 support. Source: E:\PortfolioTingz\Tetra\TetraSmall.mp4 with the first 2 frames of each scene cut (grass pop-in). Bump the `?v=` on these URLs when replacing them. Size budget: phone file under ~6 MB, desktop files under ~14 MB.
-- `video/<project>/` — click-to-play project videos (H.264, max 1920 wide, `preload="none"` with a `-poster.webp`). Sound kept only on the three that have it (Picture Perfect demo and waterfall showcase, Great Wander mechanics). Originals: E:\PortfolioTingz\Website Videos and the project folders. Matched to the old Squarespace videos by duration and aspect ratio. Keep each under ~30 MB (GitHub Pages hard limit is 100 MB per file).
+- `video/<project>/` — click-to-play project videos (H.264, max 1920 wide, `preload="none"` with a `-poster.webp`). Sound kept only on the three that have it (Picture Perfect demo, Great Wander mechanics). Originals: E:\PortfolioTingz\Website Videos and the project folders. Matched to the old Squarespace videos by duration and aspect ratio. Keep each under ~30 MB (GitHub Pages hard limit is 100 MB per file).
 - **Cache-busting:** pages load `style.css?v=N` and `lightbox.js?v=N`. GitHub Pages lets browsers cache files for 10 minutes, so whenever either file changes, bump N on every page or visitors get new HTML with old CSS.
 
 ## Facts that must stay correct
@@ -45,4 +45,5 @@ Plain HTML + one shared `style.css`. No build step, no frameworks, no JavaScript
 ## Known to-dos
 - Images live in `images/<project>/` as WebP (max 1600px wide; `-card` versions at 800px for home page cards). Originals are on Theo's computer in E:\PortfolioTingz, never committed.
 - All site images are self-hosted; nothing depends on Squarespace any more.
+- Don't add the Picture Perfect phone-mechanics clip (PicturePerfectGameplay.mp4); Theo didn't work on that feature.
 - Screenshot filenames (ScreenShot000NN) repeat across projects and capture sessions; match images by content, not by name.
