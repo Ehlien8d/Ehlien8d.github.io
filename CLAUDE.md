@@ -16,7 +16,7 @@ Plain HTML + one shared `style.css`. No build step, no frameworks, no JavaScript
 - Solo project is "Tetra (working title)" — never "PCG Playground"
 - Picture Perfect: capstone, team of 3 (with Emily Donoghue and Gavyn Martin), UE 5.3
 - Bootcamp: Circuit Stream Game Design Bootcamp via UBC Extended Learning, graduated May 2025
-- Target roles: level designer, technical designer, environment technical artist
+- Target roles shown on the site: level designer, technical designer (Theo chose not to list environment tech art)
 
 ## Look and feel
 - Dark, low-glare theme for comfortable phone reading at night. Soft dark greys, off-white text, one muted green accent (`--accent`). No bright or saturated colours.
@@ -39,5 +39,7 @@ Plain HTML + one shared `style.css`. No build step, no frameworks, no JavaScript
 - Nothing is pushed to `main` (the live site) until Theo has seen the summary and said yes.
 
 ## Known to-dos
-- Images are still hotlinked from Theo's Squarespace site (images.squarespace-cdn.com). Replace with local copies in an `images/` folder before Squarespace is cancelled.
+- Images live in `images/<project>/` as WebP (max 1600px wide; `-card` versions at 800px for home page cards). Originals are on Theo's computer in E:\PortfolioTingz, never committed.
+- Three Blaze A Maze images (Cursed Cubes, Tree of Knowledge, Checkpoint) are still hotlinked from Squarespace; originals not found yet. Replace before Squarespace is cancelled.
+- Screenshot filenames (ScreenShot000NN) repeat across projects and capture sessions; match images by content, not by name.
 - Picture Perfect waterfall video: placeholder comment in `picture-perfect.html` until it's on YouTube.
