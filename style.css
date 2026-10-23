@@ -69,3 +69,9 @@ main a img{cursor:pointer}
 .about .pics{justify-items:center;gap:1.5rem}
 .about .portrait{width:min(260px,70%);aspect-ratio:1;height:auto;object-fit:cover;border-radius:50%;border:1px solid var(--line)}
 @media(max-width:700px){.about-band{padding:2.5rem 1.25rem}.about .pics{order:-1}}
+.card-img{display:block}
+.card-img img{transition:opacity .15s}
+.card-img:hover img{opacity:.85}
+footer a[href^="mailto:"]{text-decoration:underline;text-underline-offset:3px}
+.copy-email{margin-left:.25rem;padding:.2rem .6rem;border:1px solid var(--line);border-radius:6px;background:var(--panel);color:var(--muted);font:inherit;font-size:.85rem;cursor:pointer}
+.copy-email:hover,.copy-email:focus-visible{color:var(--text);border-color:var(--accent)}
