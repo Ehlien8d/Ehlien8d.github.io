@@ -75,3 +75,8 @@ main a img{cursor:pointer}
 footer a[href^="mailto:"]{text-decoration:underline;text-underline-offset:3px}
 .copy-email{margin-left:.25rem;padding:.2rem .6rem;border:1px solid var(--line);border-radius:6px;background:var(--panel);color:var(--muted);font:inherit;font-size:.85rem;cursor:pointer}
 .copy-email:hover,.copy-email:focus-visible{color:var(--text);border-color:var(--accent)}
+.gallery.r43>img,.gallery.r43>figure img{aspect-ratio:4/3}
+.card.feature{display:grid;grid-template-columns:1fr 1fr}
+.card.feature .card-img img{width:100%;height:100%}
+.card.feature .body p{margin:.5rem 0 1rem}
+@media(max-width:700px){.card.feature{grid-template-columns:1fr}.card.feature .card-img img{height:auto}}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Serene Statue | Theo Dwyer</title><link rel="stylesheet" href="style.css?v=13"></head>
+<body>
+<header><nav><a class="name" href="index.html">Theo Dwyer</a>
+<ul><li><a href="index.html#projects">Projects</a></li><li><a href="index.html#about">About</a></li><li><a href="#contact">Get In Touch</a></li></ul></nav></header>
+<main>
+<img src="images/serene-statue/in-forest.webp" width="1600" height="1001" alt="The scanned wooden bust sitting on a picnic table in a forest scene in Unreal Engine 5">
+<h1 style="margin-top:1.5rem">Serene Statue</h1>
+<p class="muted">Photogrammetry · Solo · Nikon P510 → RealityScan → Blender → Unreal Engine 5</p>
+
+<h2>At a Glance</h2>
+<p>Serene Statue is my first photogrammetry asset: a carved wooden bust that I photographed, rebuilt as a 3D model, cleaned up, and brought into Unreal Engine 5 as a Nanite mesh. It was a weekend project to learn the whole pipeline, from camera to engine.</p>
+
+<h2>Capture</h2>
+<p>I took 96 photos with a Nikon P510 in my greenhouse, where the plastic walls give soft, even light. The statue sat on a turntable, and I shot three rings at different heights, turning it a little between each photo.</p>
+<div class="gallery r43">
+<img loading="lazy" src="images/serene-statue/capture-front.webp" alt="One of the capture photos: the bust on the turntable in the greenhouse">
+<img loading="lazy" src="images/serene-statue/capture-high.webp" alt="A photo from the highest ring, looking down at the top of the head">
+</div>
+
+<h2>RealityScan</h2>
+<p>My first try wouldn't align. The statue turned while the background stayed still, which confused RealityScan about where the camera was. Masking the photos with its AI masking tool fixed that, so only the statue was used. From there it was align, build the model at normal detail, simplify, unwrap, texture, and export.</p>
+<figure class="video-fig"><video controls preload="none" width="1920" height="1148" playsinline poster="video/serene-statue/realityscan-poster.webp" aria-label="RealityScan: the aligned cameras around the statue and the finished textured model"><source src="video/serene-statue/realityscan.mp4" type="video/mp4"></video></figure>
+<div class="gallery r43">
+<img loading="lazy" src="images/serene-statue/rs-align.webp" alt="Aligned camera positions in three rings around the statue in RealityScan">
+<img loading="lazy" src="images/serene-statue/rs-model.webp" alt="The reconstructed mesh in RealityScan before texturing">
+</div>
+
+<h2>Triangles and Nanite</h2>
+<p>The raw scan came out at about 2 million triangles: lots of detail, but dense and uneven. I simplified it to about 1 million, which kept the silhouette and the carved detail. In Unreal, Nanite groups triangles into clusters and only draws the detail each pixel needs, so a mesh this heavy still runs in real time.</p>
+<div class="gallery r43">
+<figure><img loading="lazy" src="images/serene-statue/tris-raw.webp" alt="Close-up wireframe of the raw scan in Blender"><figcaption class="muted">Raw scan: 2,016,590 triangles</figcaption></figure>
+<figure><img loading="lazy" src="images/serene-statue/tris-simplified.webp" alt="The same close-up wireframe after simplifying"><figcaption class="muted">Simplified: 997,836 triangles</figcaption></figure>
+<figure><img loading="lazy" src="images/serene-statue/nanite-tris.webp" alt="The statue in Unreal's Nanite triangle view, each cluster of triangles in a different colour"><figcaption class="muted">Nanite triangle view in Unreal</figcaption></figure>
+</div>
+
+<h2>Cleanup in Blender</h2>
+<p>The scan picked up a sliver of the turntable under the base. In Blender I used Bisect with Clear Inner and Fill to cut the bottom flat and close it, moved the origin to the bottom so it sits properly on surfaces in engine, and exported it as an FBX.</p>
+<figure class="video-fig"><video controls preload="none" width="1920" height="1250" playsinline poster="video/serene-statue/blender-cleanup-poster.webp" aria-label="Blender: cutting the base of the statue flat with Bisect"><source src="video/serene-statue/blender-cleanup.mp4" type="video/mp4"></video></figure>
+<div class="gallery r43">
+<figure><img loading="lazy" src="images/serene-statue/blender-before.webp" alt="The statue in Blender with a piece of the turntable stuck to its base"><figcaption class="muted">Before cleanup</figcaption></figure>
+<figure><img loading="lazy" src="images/serene-statue/blender-after.webp" alt="The statue in Blender with a flat, closed base"><figcaption class="muted">After cleanup</figcaption></figure>
+</div>
+
+<h2>In Unreal Engine</h2>
+<p>I imported the FBX with Nanite turned on and placed the statue in my scenes to see how it holds up next to other assets and lighting.</p>
+<figure class="video-fig"><video controls preload="none" width="1920" height="1220" playsinline poster="video/serene-statue/in-unreal-poster.webp" aria-label="The statue in Unreal Engine 5, rendered with Nanite"><source src="video/serene-statue/in-unreal.mp4" type="video/mp4"></video></figure>
+
+<h2>What I'd Do Differently</h2>
+<ul style="margin:0 0 1rem 1.2rem">
+<li>Add an even lower ring of photos, under the chin, to pick up the underside.</li>
+<li>Put a plain backdrop behind the turntable, so there's less background for the software to sort out.</li>
+<li>Get closer, so the statue fills more of each frame and every photo carries more detail.</li>
+</ul>
+<p>Next, I want to retopologize it and bake the high-poly detail onto a lighter version.</p>
+<p><a class="btn" href="index.html#assets">← Back to projects</a></p>
+</main>
+<footer id="contact"><p><a href="mailto:theo.dwyer@gmail.com">theo.dwyer@gmail.com</a></p>
+<p><a href="https://www.linkedin.com/in/theo-dwyer">LinkedIn</a><a href="https://www.credly.com/badges/b016af10-5c86-4a6a-9766-f2f35e834133/public_url">Credly</a></p>
+<p>© Theo Dwyer</p></footer>
+<script src="lightbox.js?v=4" defer></script>
+<script src="site.js?v=1" defer></script>
+<script data-goatcounter="https://ehlien8.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</body></html>
