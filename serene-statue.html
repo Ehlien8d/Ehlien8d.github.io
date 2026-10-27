@@ -5,7 +5,7 @@
 <header><nav><a class="name" href="index.html">Theo Dwyer</a>
 <ul><li><a href="index.html#projects">Projects</a></li><li><a href="index.html#about">About</a></li><li><a href="#contact">Get In Touch</a></li></ul></nav></header>
 <main>
-<img src="images/serene-statue/in-forest.webp" width="1600" height="1001" alt="The scanned wooden bust sitting on a picnic table in a forest scene in Unreal Engine 5">
+<img src="images/serene-statue/in-forest.webp" alt="The scanned wooden bust sitting on a picnic table in a forest scene in Unreal Engine 5">
 <h1 style="margin-top:1.5rem">Serene Statue</h1>
 <p class="muted">Photogrammetry · Solo · Nikon P510 → RealityScan → Blender → Unreal Engine 5</p>
 
@@ -23,7 +23,7 @@
 <p>My first try wouldn't align. The statue turned while the background stayed still, which confused RealityScan about where the camera was. Masking the photos with its AI masking tool fixed that, so only the statue was used. From there it was align, build the model at normal detail, simplify, unwrap, texture, and export.</p>
 <figure class="video-fig"><video controls preload="none" width="1920" height="1148" playsinline poster="video/serene-statue/realityscan-poster.webp" aria-label="RealityScan: the aligned cameras around the statue and the finished textured model"><source src="video/serene-statue/realityscan.mp4" type="video/mp4"></video></figure>
 <div class="gallery r43">
-<img loading="lazy" src="images/serene-statue/rs-align.webp" alt="Aligned camera positions in three rings around the statue in RealityScan">
+<img loading="lazy" src="images/serene-statue/rs-align.webp" alt="The aligned point cloud of the statue in RealityScan, with camera positions around it">
 <img loading="lazy" src="images/serene-statue/rs-model.webp" alt="The reconstructed mesh in RealityScan before texturing">
 </div>
 
@@ -32,7 +32,7 @@
 <div class="gallery r43">
 <figure><img loading="lazy" src="images/serene-statue/tris-raw.webp" alt="Close-up wireframe of the raw scan in Blender"><figcaption class="muted">Raw scan: 2,016,590 triangles</figcaption></figure>
 <figure><img loading="lazy" src="images/serene-statue/tris-simplified.webp" alt="The same close-up wireframe after simplifying"><figcaption class="muted">Simplified: 997,836 triangles</figcaption></figure>
-<figure><img loading="lazy" src="images/serene-statue/nanite-tris.webp" alt="The statue in Unreal's Nanite triangle view, each cluster of triangles in a different colour"><figcaption class="muted">Nanite triangle view in Unreal</figcaption></figure>
+<figure><img loading="lazy" src="images/serene-statue/nanite-tris.webp" alt="The statue in Unreal's Nanite triangle view, each triangle in a different colour"><figcaption class="muted">Nanite triangle view in Unreal</figcaption></figure>
 </div>
 
 <h2>Cleanup in Blender</h2>
