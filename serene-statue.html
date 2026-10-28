@@ -20,7 +20,7 @@
 </div>
 
 <h2>RealityScan</h2>
-<p>My first try wouldn't align. All the photos were taken from fixed positions and without the background spinning RealityScan was unable to make any sense of the data. Masking out the background with the built in AI masking tool managed to save my work and give me a useable scan.</p>
+<p>My first try wouldn't align. All the photos were taken from fixed positions and without the background spinning, RealityScan was unable to make any sense of the data. Masking out the background with the built-in AI masking tool managed to save my work and give me a useable scan.</p>
 <figure class="video-fig"><video controls preload="none" width="1920" height="1148" playsinline poster="video/serene-statue/realityscan-poster.webp" aria-label="RealityScan: the aligned cameras around the statue and the finished textured model"><source src="video/serene-statue/realityscan.mp4" type="video/mp4"></video></figure>
 <div class="gallery r43">
 <figure><img loading="lazy" src="images/serene-statue/rs-align-failed.webp" alt="The failed alignment in RealityScan: a few scattered clumps of cameras and almost no points"><figcaption class="muted">First try, no masking</figcaption></figure>
@@ -40,13 +40,13 @@
 <p>The raw scan included the cork base the statue sat on, so I did the first cleanup in RealityScan and removed the cork. That still left an uneven sliver under the base. In Blender I used Bisect with Clear Inner and Fill to cut the bottom flat and close it, moved the origin to the bottom so it sits properly on surfaces in engine, and exported it as an FBX.</p>
 <figure class="video-fig"><video controls preload="none" width="1920" height="1250" playsinline poster="video/serene-statue/blender-cleanup-poster.webp" aria-label="Blender: cutting the base of the statue flat with Bisect"><source src="video/serene-statue/blender-cleanup.mp4" type="video/mp4"></video></figure>
 <div class="gallery r43">
-<figure><img loading="lazy" src="images/serene-statue/scan-on-cork.webp" alt="The raw scan, untextured, still sitting on the cork base"><figcaption class="muted">Raw scan on the cork base</figcaption></figure>
+<figure><img loading="lazy" src="images/serene-statue/scan-on-cork.webp" alt="The textured scan in RealityScan, still sitting on the cork base"><figcaption class="muted">Raw scan on the cork base</figcaption></figure>
 <figure><img loading="lazy" src="images/serene-statue/blender-before.webp" alt="The statue in Blender after the cork was removed, with an uneven sliver left under the base"><figcaption class="muted">Cork removed in RealityScan</figcaption></figure>
 <figure><img loading="lazy" src="images/serene-statue/blender-after.webp" alt="The statue in Blender with a flat, closed base"><figcaption class="muted">Base cut flat in Blender</figcaption></figure>
 </div>
 
 <h2>In Unreal Engine</h2>
-<p>I imported the FBX with Nanite turned on and placed the statue in my scenes to see how it holds up next to other assets and lighting.</p>
+<p>I imported the FBX with Nanite turned on and placed the statue in my scenes to see how it holds up next to other assets and lighting. The statue is the only asset of mine in these scenes; everything else is from Fab.</p>
 <figure class="video-fig"><video controls preload="none" width="1920" height="1220" playsinline poster="video/serene-statue/in-unreal-poster.webp" aria-label="The statue in Unreal Engine 5, rendered with Nanite"><source src="video/serene-statue/in-unreal.mp4" type="video/mp4"></video></figure>
 
 <h2>What I'd Do Differently</h2>
