@@ -20,27 +20,29 @@
 </div>
 
 <h2>RealityScan</h2>
-<p>My first try wouldn't align. All the photos were taken from fixed positions with the statue turning on the turntable. Without the background spinning RealityScan was unable to make any sense of the data. Masking the photos with its AI masking tool fixed that, so only the statue was used. From there it was align, build the model at normal detail, simplify, unwrap, texture, and export.</p>
+<p>My first try wouldn't align. All the photos were taken from fixed positions and without the background spinning RealityScan was unable to make any sense of the data. Masking out the background with the built in AI masking tool managed to save my work and give me a useable scan.</p>
 <figure class="video-fig"><video controls preload="none" width="1920" height="1148" playsinline poster="video/serene-statue/realityscan-poster.webp" aria-label="RealityScan: the aligned cameras around the statue and the finished textured model"><source src="video/serene-statue/realityscan.mp4" type="video/mp4"></video></figure>
 <div class="gallery r43">
-<img loading="lazy" src="images/serene-statue/rs-align.webp" alt="The aligned point cloud of the statue in RealityScan, with camera positions around it">
-<img loading="lazy" src="images/serene-statue/rs-model.webp" alt="The reconstructed mesh in RealityScan before texturing">
+<figure><img loading="lazy" src="images/serene-statue/rs-align-failed.webp" alt="The failed alignment in RealityScan: a few scattered clumps of cameras and almost no points"><figcaption class="muted">First try, no masking</figcaption></figure>
+<figure><img loading="lazy" src="images/serene-statue/rs-align.webp" alt="The aligned point cloud of the statue in RealityScan, with camera positions around it"><figcaption class="muted">After AI masking</figcaption></figure>
+<figure><img loading="lazy" src="images/serene-statue/rs-model.webp" alt="The reconstructed mesh in RealityScan before texturing"><figcaption class="muted">Reconstructed mesh</figcaption></figure>
 </div>
 
 <h2>Triangles and Nanite</h2>
-<p>The raw scan came out at about 2 million triangles: lots of detail, but dense and uneven. I simplified it to about 1 million, which kept the silhouette and the carved detail. In Unreal, Nanite groups triangles into clusters and only draws the detail each pixel needs, so a mesh this heavy still runs in real time.</p>
+<p>The raw scan came out at about 2 million triangles: tons of detail and heavy. I simplified it to about 1 million, which kept the silhouette and the carved detail. The next steps will be baking the high-poly detail into a lighter version to further optimize the mesh. Nanite is great but optimizing the topology first makes it better.</p>
 <div class="gallery r43">
 <figure><img loading="lazy" src="images/serene-statue/tris-raw.webp" alt="Close-up wireframe of the raw scan in Blender"><figcaption class="muted">Raw scan: 2,016,590 triangles</figcaption></figure>
 <figure><img loading="lazy" src="images/serene-statue/tris-simplified.webp" alt="The same close-up wireframe after simplifying"><figcaption class="muted">Simplified: 997,836 triangles</figcaption></figure>
 <figure><img loading="lazy" src="images/serene-statue/nanite-tris.webp" alt="The statue in Unreal's Nanite triangle view, each triangle in a different colour"><figcaption class="muted">Nanite triangle view in Unreal</figcaption></figure>
 </div>
 
-<h2>Cleanup in Blender</h2>
-<p>The scan picked up a sliver of the turntable under the base. In Blender I used Bisect with Clear Inner and Fill to cut the bottom flat and close it, moved the origin to the bottom so it sits properly on surfaces in engine, and exported it as an FBX.</p>
+<h2>Cleanup in RealityScan and Blender</h2>
+<p>The raw scan included the cork base the statue sat on, so I did the first cleanup in RealityScan and removed the cork. That still left an uneven sliver under the base. In Blender I used Bisect with Clear Inner and Fill to cut the bottom flat and close it, moved the origin to the bottom so it sits properly on surfaces in engine, and exported it as an FBX.</p>
 <figure class="video-fig"><video controls preload="none" width="1920" height="1250" playsinline poster="video/serene-statue/blender-cleanup-poster.webp" aria-label="Blender: cutting the base of the statue flat with Bisect"><source src="video/serene-statue/blender-cleanup.mp4" type="video/mp4"></video></figure>
 <div class="gallery r43">
-<figure><img loading="lazy" src="images/serene-statue/blender-before.webp" alt="The statue in Blender with a piece of the turntable stuck to its base"><figcaption class="muted">Before cleanup</figcaption></figure>
-<figure><img loading="lazy" src="images/serene-statue/blender-after.webp" alt="The statue in Blender with a flat, closed base"><figcaption class="muted">After cleanup</figcaption></figure>
+<figure><img loading="lazy" src="images/serene-statue/scan-on-cork.webp" alt="The raw scan, untextured, still sitting on the cork base"><figcaption class="muted">Raw scan on the cork base</figcaption></figure>
+<figure><img loading="lazy" src="images/serene-statue/blender-before.webp" alt="The statue in Blender after the cork was removed, with an uneven sliver left under the base"><figcaption class="muted">Cork removed in RealityScan</figcaption></figure>
+<figure><img loading="lazy" src="images/serene-statue/blender-after.webp" alt="The statue in Blender with a flat, closed base"><figcaption class="muted">Base cut flat in Blender</figcaption></figure>
 </div>
 
 <h2>In Unreal Engine</h2>
@@ -53,7 +55,6 @@
 <li>Put a plain backdrop behind the turntable, so there's less background for the software to sort out.</li>
 <li>Get closer, so the statue fills more of each frame and every photo carries more detail.</li>
 </ul>
-<p>Next, I want to retopologize it and bake the high-poly detail onto a lighter version.</p>
 <p><a class="btn" href="index.html#assets">← Back to projects</a></p>
 </main>
 <footer id="contact"><p><a href="mailto:theo.dwyer@gmail.com">theo.dwyer@gmail.com</a></p>
