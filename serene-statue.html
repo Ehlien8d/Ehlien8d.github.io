@@ -7,20 +7,20 @@
 <main>
 <img src="images/serene-statue/in-forest.webp" alt="The scanned wooden bust sitting on a picnic table in a forest scene in Unreal Engine 5">
 <h1 style="margin-top:1.5rem">Serene Statue</h1>
-<p class="muted">Photogrammetry · Solo · Nikon P510 → RealityScan → Blender → Unreal Engine 5</p>
+<p class="muted">Photogrammetry · Nikon P510 → RealityScan → Blender → Unreal Engine 5</p>
 
 <h2>At a Glance</h2>
-<p>Serene Statue is my first photogrammetry asset: a carved wooden bust that I photographed, rebuilt as a 3D model, cleaned up, and brought into Unreal Engine 5 as a Nanite mesh. It was a weekend project to learn the whole pipeline, from camera to engine.</p>
+<p>A carved wooden bust that I photographed, rebuilt as a 3D model, cleaned up in Blender, and brought into Unreal Engine 5 as a Nanite mesh. This was a weekend project to learn the whole pipeline, from camera to engine.</p>
 
 <h2>Capture</h2>
-<p>I took 96 photos with a Nikon P510 in my greenhouse, where the plastic walls give soft, even light. The statue sat on a turntable, and I shot three rings at different heights, turning it a little between each photo.</p>
+<p>I took close to 100 photos with a Nikon P510 in my greenhouse, where the plastic walls give soft, even light on overcast days. The statue sat on a turntable, and I shot three rings at different heights, turning it a little between each photo.</p>
 <div class="gallery r43">
 <img loading="lazy" src="images/serene-statue/capture-front.webp" alt="One of the capture photos: the bust on the turntable in the greenhouse">
 <img loading="lazy" src="images/serene-statue/capture-high.webp" alt="A photo from the highest ring, looking down at the top of the head">
 </div>
 
 <h2>RealityScan</h2>
-<p>My first try wouldn't align. The statue turned while the background stayed still, which confused RealityScan about where the camera was. Masking the photos with its AI masking tool fixed that, so only the statue was used. From there it was align, build the model at normal detail, simplify, unwrap, texture, and export.</p>
+<p>My first try wouldn't align. All the photos were taken from fixed positions with the statue turning on the turntable. Without the background spinning RealityScan was unable to make any sense of the data. Masking the photos with its AI masking tool fixed that, so only the statue was used. From there it was align, build the model at normal detail, simplify, unwrap, texture, and export.</p>
 <figure class="video-fig"><video controls preload="none" width="1920" height="1148" playsinline poster="video/serene-statue/realityscan-poster.webp" aria-label="RealityScan: the aligned cameras around the statue and the finished textured model"><source src="video/serene-statue/realityscan.mp4" type="video/mp4"></video></figure>
 <div class="gallery r43">
 <img loading="lazy" src="images/serene-statue/rs-align.webp" alt="The aligned point cloud of the statue in RealityScan, with camera positions around it">
