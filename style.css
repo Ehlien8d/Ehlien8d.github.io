@@ -1,5 +1,6 @@
 :root{--bg:#141517;--panel:#1d1f22;--text:#e6e4df;--muted:#a3a19b;--accent:#8fae9a;--line:#2c2f33}
 *{box-sizing:border-box;margin:0;padding:0}
+html,body{overflow-x:clip} /* the full-width About band is 100vw, which includes the desktop scrollbar; clip the extra so the page never scrolls sideways */
 body{background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6}
 [id]{scroll-margin-top:6rem}
 a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
