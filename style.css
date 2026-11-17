@@ -81,3 +81,5 @@ footer a[href^="mailto:"]{text-decoration:underline;text-underline-offset:3px}
 .card.feature .card-img img{width:100%;height:100%}
 .card.feature .body p{margin:.5rem 0 1rem}
 @media(max-width:700px){.card.feature{grid-template-columns:1fr}.card.feature .card-img img{height:auto}}
+/* Links inside body text are underlined so they stand out from the text, not only by colour */
+main p a:not(.btn){text-decoration:underline;text-underline-offset:3px}
